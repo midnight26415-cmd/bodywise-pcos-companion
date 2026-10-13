@@ -141,8 +141,9 @@
     $('#reportCycleLengths').textContent=lengths;$('#reportPeriodCount').textContent=String(dates.length);$('#reportNoteCount').textContent=String(reportDays.length);
     $('#reportRange').textContent=`Notes recorded locally · last 90 days · ${reportDays.length} day${reportDays.length===1?'':'s'} with entries`;
     $('#reportCycleSummary').textContent=dates.length?`${dates.map(d=>fmt(d,{day:'numeric',month:'short'})).join(', ')} · ${lengths}`:'No period starts recorded in this sample.';
-    const symptoms=reportDays.flatMap(([,d])=>Object.entries(d.symptoms||{}).filter(([,v])=>v&&v!=='unset').map(([k,v])=>`${symptomNames.find(x=>x[0]===k)?.[1]||k}: ${levels.find(x=>x[0]===v)?.[1]||v}`));
-    $('#reportSkinSummary').textContent=symptoms.length?`${new Set(symptoms).size} symptom categories noted across ${reportDays.length} days`:'No symptom notes recorded.';
+    const skinHairKeys=['skin','facialHair','hairFall'],skinHairDays=reportDays.filter(([,d])=>skinHairKeys.some(k=>d.symptoms?.[k]&&d.symptoms[k]!=='unset')).length;
+    const skinHairAreas=skinHairKeys.filter(k=>reportDays.some(([,d])=>d.symptoms?.[k]&&d.symptoms[k]!=='unset')).map(k=>symptomNames.find(x=>x[0]===k)[1]);
+    $('#reportSkinSummary').textContent=skinHairAreas.length?`${skinHairAreas.join(', ')} · noted on ${skinHairDays} days`:'No skin or hair notes recorded.';
     const energyLogged=reportDays.filter(([,d])=>d.symptoms?.energy).length,moodLogged=reportDays.filter(([,d])=>d.symptoms?.mood).length;
     $('#reportEnergySummary').textContent=energyLogged||moodLogged?`Energy noted on ${energyLogged} days; mood noted on ${moodLogged} days.`:'No energy or mood notes recorded.';
     const habitTotal=reportDays.reduce((sum,[,d])=>sum+Object.values(d.habits||{}).filter(Boolean).length,0);$('#reportHabitSummary').textContent=habitTotal?`${habitTotal} habit check-ins recorded across ${reportDays.length} days.`:'No habit check-ins recorded.';
