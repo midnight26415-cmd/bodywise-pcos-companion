@@ -118,6 +118,7 @@
     state={periods:cycleSeed,daily:sampleDaily,conception:!!old.conception,ovulationNotes:old.ovulationNotes||[],doctorNotes:old.doctorNotes||''};
     if(old.symptoms||old.habits)state.daily[todayKey]={symptoms:old.symptoms||{},habits:old.habits||{}};
   }
+  if(typeof state.userStarted!=='boolean')state.userStarted=!(JSON.stringify(state.periods)===JSON.stringify(cycleSeed)&&JSON.stringify(state.daily)===JSON.stringify(sampleDaily));
   state.daily ||= {};state.periods=[...new Set(state.periods)].filter(d=>/^\d{4}-\d{2}-\d{2}$/.test(d)&&d<=todayKey).sort();state.ovulationNotes ||= [];state.doctorNotes ||= '';
   const getDay=(date=todayKey)=>state.daily[date] ||= blankDaily();
   state.profile ||= {};state.weights ||= [];state.products ||= [];state.hideWeight ||= false;state.language ||= 'en';state.userStarted ||= false;
