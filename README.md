@@ -1,26 +1,22 @@
 # Bodywise PCOS Companion
 
-A mobile-first product concept for supporting everyday PCOS self-management between appointments. The prototype uses fictional sample data and runs as a single static page.
+A mobile-first PCOS lifestyle companion concept for Be Bodywise. This is a fictional demo, not an official Bodywise product.
 
-## Open the demo
+## Open the app
 
-Open `index.html` in a modern browser. No install, account, backend, or build step is required. The interface uses Google Fonts when a network connection is available and falls back to system fonts when it is not.
+GitHub Pages: https://midnight26415-cmd.github.io/bodywise-pcos-companion/
 
-## What is included
+Open `index.html` locally for development. No build step, account, or backend is required.
 
-- Daily habit and symptom check-ins
-- Cycle history that records dates and lengths without assuming a 28-day cycle or predicting ovulation
-- Illustrative pattern cards, clearly labeled as demo data
-- A clinician-visit summary that can be copied or printed to PDF
-- Short educational cards with cautious, non-prescriptive language
-- Responsive desktop and mobile navigation
+## Included
 
-## Data and scope
+- Daily symptom and habit check-ins saved by date
+- Irregular-cycle journal with recorded cycle lengths; no 28-day assumption or ovulation prediction
+- Pattern summaries based on the sample and locally entered notes
+- Printable/copyable 90-day doctor-visit summary
+- Bite-size educational cards
+- Responsive mobile navigation and touch-friendly controls
 
-This is a front-end demo, not an official Be Bodywise product. The sample profile and entries are fictional. Entries added in the browser are saved in that browser's `localStorage`; there is no server or account sync. Browser storage is not encrypted, so use fictional information in the demo and clear the browser's site data to remove saved entries.
+## Privacy and scope
 
-The app organizes personal notes and does not diagnose PCOS, interpret symptoms, recommend or change treatment, or predict fertility. It is not a substitute for care from a qualified clinician. No checkout or payments are included.
-
-## Later deployment
-
-This folder is intentionally separate from the earlier Man Matters / Rooted project. No GitHub repository or public deployment has been created for it yet.
+All profile data is fictional by default. Entries are saved only in the current browser's localStorage; there is no account sync or server. Browser local storage is not encrypted, so do not enter real personal health information. This prototype organizes notes only; it does not diagnose PCOS, interpret symptoms, recommend or change treatment, or predict fertility. It does not replace a qualified clinician. No payments are included.
