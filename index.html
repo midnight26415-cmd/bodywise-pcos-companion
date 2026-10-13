@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f8f7f2" />
-  <meta name="description" content="A gentle PCOS lifestyle companion for noticing patterns and preparing for care." />
+  <meta name="description" content="PCOS Companion is a calm space to track cycles, habits, and questions for your next care visit." />
   <meta name="color-scheme" content="light" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23244b3d'/%3E%3Ctext x='20' y='27' text-anchor='middle' font-family='Arial' font-size='19' font-weight='bold' fill='white'%3Eb%3C/text%3E%3C/svg%3E" />
-  <title>Bodywise — your PCOS companion</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23244b3d'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial' font-size='14' font-weight='bold' fill='white'%3EPC%3C/text%3E%3C/svg%3E" />
+  <title>PCOS Companion — your everyday health journal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -33,11 +33,121 @@
     @media(max-width:900px){.top-inner{gap:10px}.menu-toggle{display:flex;order:3;align-items:center;justify-content:center;gap:7px;min-width:44px;min-height:44px;padding:0 10px;border:1px solid var(--line);border-radius:10px;background:#fffefa;color:var(--green-dark);font-size:11px;font-weight:700}.menu-toggle svg{width:19px;height:19px}.top-nav,.mobile-nav{display:none!important}.sidebar.mobile-open{display:block;position:fixed;z-index:30;top:62px;bottom:0;left:0;width:min(310px,calc(100vw - 48px));overflow:auto;padding:18px 17px calc(20px + env(safe-area-inset-bottom));background:var(--paper);border:0;border-right:1px solid var(--line);border-radius:0 16px 0 0;box-shadow:0 16px 48px #17231c30}.sidebar-close{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:9px;background:transparent;color:var(--muted);font-size:11px;font-weight:700;margin-left:auto}.side-nav{padding-top:10px}.layout{grid-template-columns:1fr;padding-bottom:36px}}
     @media(max-width:680px){.topbar{height:62px}.top-inner{padding:0 12px}.brand{gap:7px}.brand-mark{width:32px;height:32px}.brand-name{font-size:14px}.demo-user{display:none}.layout{padding:20px 14px 38px}.sidebar.mobile-open{top:62px}.setup-modal{margin-bottom:0}.main{width:100%}}
   </style>
+  <style id="pcos-companion-design">
+    :root{--ink:#292d28;--muted:#666d63;--green:#466c58;--green-dark:#244b3d;--green-soft:#e8efe7;--cream:#f8f7f2;--paper:#fffefa;--line:#e4e5dc;--coral:#d98271;--coral-soft:#f9eae4;--lilac:#edeaf3;--shadow:0 8px 26px #273b2e0a;--radius:18px}
+    body{font-size:15px;line-height:1.6}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline-color:var(--green-dark)}
+    .topbar{background:rgba(248,247,242,.97);border-color:#e3e4db}
+    .top-inner{max-width:1320px;padding-inline:32px;gap:20px}
+    .brand{gap:12px}
+    .brand-mark{width:40px;height:40px;border-radius:14px;font-size:12px;letter-spacing:-.25px}
+    .brand-name{font-size:20px;letter-spacing:-.7px;color:var(--ink)}
+    .brand-name span{display:none}
+    .brand-tag{font-size:11px;letter-spacing:.04em;color:var(--muted)}
+    .demo-user{font-size:12px}
+    .layout{max-width:1320px;grid-template-columns:220px minmax(0,1fr);gap:52px;padding:40px 32px 88px}
+    .sidebar{top:96px}
+    .profile{gap:13px;padding-bottom:22px}
+    .profile .demo-avatar{width:44px;height:44px}
+    .profile strong{font-size:14px}
+    .profile small{font-size:12px;color:var(--muted)}
+    .side-nav{gap:6px;padding:18px 0}
+    .side-nav button{height:auto;min-height:48px;padding:0 13px;border-radius:12px;font-size:13px;gap:12px;transition:background-color .16s ease,color .16s ease}
+    .side-icon{width:20px;font-size:17px}
+    .side-tools{gap:10px;padding-top:8px}
+    .side-tools .button-outline{min-height:48px;font-size:13px}
+    .language-switch button{min-height:44px;font-size:13px}
+    .about{font-size:12px;line-height:1.55}
+    .about summary{min-height:44px;display:flex;align-items:center}
+    .support-link{font-size:13px}
+    .support-link small{font-size:12px}
+    .main{max-width:980px}
+    .welcome{margin-bottom:28px;gap:20px}
+    .welcome h1{font-size:36px;line-height:1.12;letter-spacing:-1.35px;margin:7px 0 8px}
+    .welcome p,.page-head p{font-size:15px;line-height:1.6;color:#596158}
+    .welcome-date{font-size:12px}
+    .eyebrow{font-size:11px;letter-spacing:.13em}
+    .intro-note{font-size:13px;padding:13px 16px;margin-bottom:20px}
+    .cycle-hero{grid-template-columns:minmax(0,1fr) 250px;gap:32px;padding:34px 36px;border-radius:22px}
+    .cycle-kicker{font-size:11px;letter-spacing:.13em}
+    .cycle-hero h2{font-size:25px;line-height:1.25;letter-spacing:-.55px;margin:10px 0}
+    .cycle-hero p{font-size:14px;line-height:1.65}
+    .cycle-day strong{font-size:48px}
+    .cycle-day span{font-size:13px}
+    .cycle-track{gap:6px;margin:16px 0 8px}
+    .cycle-track i{height:6px}
+    .cycle-foot{font-size:11px;gap:10px}
+    .button-primary,.button-light,.button-outline{min-height:48px;padding-inline:17px;font-size:13px;border-radius:10px}
+    .hero-actions{gap:10px;margin-top:22px}
+    .section-title{margin:32px 0 15px}
+    .section-title h2{font-size:21px;letter-spacing:-.5px}
+    .section-title p{font-size:14px}
+    .today-grid,.cycle-summary,.insights-grid,.learn-grid,.understanding{gap:17px}
+    .surface{border-color:#e5e5dc;box-shadow:0 6px 22px #273b2e08}
+    .symptom-card,.habit-card,.insight-card,.learn-card,.report-card,.history-card{padding:23px}
+    .card-heading h3{font-size:17px;letter-spacing:-.25px}
+    .card-heading p{font-size:13px}
+    .small-tag{font-size:10px;padding:6px 9px}
+    .symptom-list{margin-top:16px}
+    .symptom-row{min-height:54px;gap:10px}
+    .symptom-name{font-size:13px}
+    .symptom-tap{min-width:92px;min-height:44px;padding:8px 12px;font-size:12px}
+    .symptom-foot{padding-top:14px;margin-top:8px}
+    .symptom-foot p{font-size:12px;line-height:1.5}
+    .quiet-link{min-width:44px;min-height:44px;padding:8px 10px;font-size:12px}
+    .habit-list{gap:7px;margin-top:17px}
+    .habit-row{min-height:58px;gap:12px}
+    .habit-check{width:24px;height:24px}
+    .habit-copy strong{font-size:13px}
+    .habit-copy small{font-size:12px;line-height:1.45}
+    .habit-time,.habit-footer{font-size:12px}
+    .habit-footer{margin-top:14px;padding-top:14px;gap:12px}
+    .mini-insight,.mini-visit{padding:20px;gap:15px}
+    .mini-mark{width:42px;height:42px;border-radius:13px}
+    .mini-insight h3,.mini-visit h3{font-size:14px}
+    .mini-insight p,.mini-visit p{font-size:12px;line-height:1.5}
+    .page-head{margin-bottom:24px}
+    .page-head h1{font-size:32px;letter-spacing:-1px}
+    .history-card h2,.conception-card h2,.insight-card h2,.report-card h2,.learn-card h2{font-size:17px}
+    .history-card>p,.conception-card>p,.insight-card>p,.report-card>p,.learn-card>p{font-size:13px;line-height:1.6}
+    .cycle-current{padding:24px;border-radius:18px}
+    .cycle-current .cycle-day strong{font-size:46px}
+    .cycle-current p{font-size:13px}
+    .report-stat{padding:14px}
+    .report-stat small{font-size:10px}
+    .report-stat strong{font-size:18px}
+    .report-table{font-size:12px}
+    .report-table th{font-size:11px}
+    .report-note{font-size:14px;line-height:1.55}
+    .learn-card{min-height:180px}
+    .learn-card .learn-no,.learn-card .learn-foot{font-size:11px}
+    .month{padding:15px 13px;border-top-width:3px}
+    .month strong{font-size:12px}
+    .month small{font-size:11px;line-height:1.5}
+    .chart-note,.disclaimer-inline,.private-banner,.login-note,.legal,.setup-hint{font-size:12px;line-height:1.55}
+    .modal-backdrop{padding:24px}
+    .modal{border-radius:20px;padding:28px;box-shadow:0 22px 64px #131a1530}
+    .modal-close{width:44px;height:44px}
+    .modal h2{font-size:25px;letter-spacing:-.7px}
+    .modal p{font-size:14px;line-height:1.6}
+    .modal input,.modal select,.modal textarea{min-height:48px;font-size:16px;border-radius:10px}
+    .modal-actions{gap:10px;margin-top:16px}
+    .menu-toggle,.sidebar-close{min-width:48px;min-height:48px;font-size:13px}
+    .mobile-nav{display:none!important}
+    body.menu-open{overflow:hidden}
+    @media(max-width:1100px){.layout{gap:36px;grid-template-columns:205px minmax(0,1fr)}.main{max-width:900px}}
+    @media(max-width:900px){.top-inner{padding-inline:22px}.brand-tag{display:none}.layout{display:grid;grid-template-columns:1fr;gap:0;padding:28px 24px 52px}.sidebar{display:none}.sidebar.mobile-open{display:block;position:fixed;z-index:30;top:72px;bottom:0;left:0;width:min(340px,calc(100vw - 48px));overflow:auto;padding:18px 20px calc(24px + env(safe-area-inset-bottom));background:var(--paper);border:0;border-right:1px solid var(--line);border-radius:0 18px 0 0;box-shadow:0 18px 54px #17231c30}.main{max-width:840px}.today-grid{grid-template-columns:minmax(0,1.1fr) minmax(270px,.9fr)}.top-nav,.mobile-nav{display:none!important}.menu-toggle{display:flex;align-items:center;justify-content:center;gap:8px;padding:0 13px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--green-dark);font-weight:700}.menu-toggle svg{width:20px;height:20px}.sidebar-close{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:10px;background:transparent;color:var(--muted);font-weight:700;margin-left:auto}.side-nav{padding-top:10px}body.menu-open:before{top:72px}}
+    @media(max-width:760px){.today-grid,.cycle-summary,.insights-grid,.learn-grid,.understanding{grid-template-columns:1fr}.cycle-hero{grid-template-columns:1fr 220px}.month-line{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:680px){.topbar{height:62px}.top-inner{padding-inline:14px;gap:8px}.brand{gap:9px}.brand-mark{width:36px;height:36px}.brand-name{font-size:16px}.demo-user{display:none}.layout{padding:22px 16px 38px}.sidebar.mobile-open{top:62px;padding-inline:17px}body.menu-open:before{top:62px}.welcome{align-items:flex-start;margin-bottom:22px}.welcome h1{font-size:30px;line-height:1.15}.welcome p,.page-head p{font-size:15px}.welcome-date{display:none}.cycle-hero{grid-template-columns:1fr;padding:24px;border-radius:20px;gap:20px}.cycle-hero:after{right:-115px;top:-170px}.cycle-hero h2{font-size:23px}.cycle-side{max-width:100%}.today-grid{grid-template-columns:1fr}.section-title{margin:27px 0 13px}.symptom-card,.habit-card,.insight-card,.learn-card,.report-card,.history-card{padding:20px}.cycle-summary,.insights-grid,.learn-grid,.understanding{grid-template-columns:1fr}.report-highlights{grid-template-columns:repeat(3,minmax(0,1fr))}.report-stat{padding:12px 9px}.report-stat small{font-size:10px}.month-line{grid-template-columns:repeat(2,minmax(0,1fr))}.modal-backdrop{padding:14px}.modal{padding:23px;border-radius:18px}.modal-actions>*{flex:1}.footer-note{margin-inline:16px}}
+    @media(max-width:380px){.top-inner{padding-inline:11px}.brand-name{font-size:15px}.menu-toggle{min-width:44px;padding-inline:10px}.layout{padding-inline:12px}.welcome h1{font-size:27px}.cycle-hero{padding:20px}.hero-actions>*{flex:1}.symptom-row{grid-template-columns:minmax(0,1fr) auto}.symptom-tap{min-width:82px}.report-card{padding:15px}.report-table{table-layout:fixed;overflow-wrap:anywhere}.report-table th,.report-table td{padding:7px 4px}}
+    @media(max-width:350px){.brand-mark{width:33px;height:33px}.brand-name{font-size:14px}.menu-toggle{gap:5px}.menu-toggle svg{width:18px;height:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.side-nav button,.button-primary,.button-light,.button-outline,.symptom-tap,.habit-row,.mini-insight,.mini-visit{transition:none!important;animation:none!important}}
+  </style>
 </head>
 <body>
 <div class="app">
   <header class="topbar"><div class="top-inner">
-    <a class="brand" href="#today" aria-label="Bodywise home"><span class="brand-mark">bw</span><span class="brand-name">be bodywise<span> / PCOS companion</span></span><span class="brand-tag">CARE, IN YOUR EVERYDAY</span></a>
+    <a class="brand" href="#today" aria-label="PCOS Companion home"><span class="brand-mark">PC</span><span class="brand-name">PCOS Companion</span><span class="brand-tag">YOUR HEALTH, AT YOUR PACE</span></a>
     <div class="demo-user"><span>DEMO SPACE</span><i class="demo-avatar">A</i></div><button class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Open side menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></button>
   </div></header>
   <div class="layout">
@@ -45,7 +155,7 @@
       <button class="sidebar-close" id="sidebarClose" type="button">Close menu</button>
       <div class="profile"><i class="demo-avatar" id="profileInitial">D</i><div><strong id="profileName">Demo space</strong><small id="profileMeta">Fictional sample data</small></div></div>
       <nav class="side-nav" aria-label="Your space navigation"><button class="active" data-page="today"><span class="side-icon">◷</span>Today</button><button data-page="cycle"><span class="side-icon">◌</span>Cycle journal</button><button data-page="insights"><span class="side-icon">⌁</span>Patterns</button><button data-page="report"><span class="side-icon">▤</span>Doctor visit</button><button data-page="learn"><span class="side-icon">✳</span>Learn</button></nav>
-      <div class="side-tools"><button class="button-outline" id="loginOpen" type="button">Log in</button><button class="button-outline" id="editProfile">Edit your setup</button><div class="language-switch" role="group" aria-label="Language"><button id="langEn" class="active" type="button">EN</button><button id="langHi" type="button">हिंदी</button></div><button class="quiet-link" id="resetDemo" type="button">Reset demo data</button><details class="about"><summary>About this concept</summary><p>Bodywise — your PCOS companion is a fictional lifestyle-support prototype. It does not diagnose, predict ovulation, or replace your clinician. Notes stay in this browser and are not encrypted.</p></details><a class="support-link" href="mailto:midnight26415@gmail.com">Customer care<small>midnight26415@gmail.com</small></a></div>
+      <div class="side-tools"><button class="button-outline" id="loginOpen" type="button">Log in</button><button class="button-outline" id="editProfile">Edit your setup</button><div class="language-switch" role="group" aria-label="Language"><button id="langEn" class="active" type="button">EN</button><button id="langHi" type="button">हिंदी</button></div><button class="quiet-link" id="resetDemo" type="button">Reset demo data</button><details class="about"><summary>About this concept</summary><p>PCOS Companion is an independent, fictional lifestyle-support prototype. It does not diagnose, predict ovulation, or replace your clinician. Notes stay in this browser and are not encrypted.</p></details><a class="support-link" href="mailto:midnight26415@gmail.com">Customer care<small>midnight26415@gmail.com</small></a></div>
     </aside>
     <main class="main">
       <section class="page active" id="today">
@@ -101,7 +211,7 @@
 <div class="modal-backdrop" id="periodModal" role="dialog" aria-modal="true" aria-labelledby="periodTitle"><div class="modal"><button class="modal-close" data-close-modal aria-label="Close">×</button><div class="eyebrow">Cycle journal</div><h2 id="periodTitle">Log a period start</h2><p>Record the date your period began. This won't trigger a “late” alert or predict ovulation.</p><label for="periodDate" class="eyebrow">Start date</label><input type="date" id="periodDate"><div class="modal-actions"><button class="button-outline" data-close-modal>Cancel</button><button class="button-primary" id="savePeriod">Save date</button></div><div class="legal">Cycle tracking is for your personal notes. It cannot diagnose a condition or predict fertility.</div></div></div>
 <div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><form class="modal" id="loginForm"><button class="modal-close" id="loginClose" type="button" aria-label="Close">×</button><div class="eyebrow">Your space</div><h2 id="loginTitle">Log in on this device</h2><p>Enter your email to continue with this prototype.</p><label class="setup-label" for="loginEmail">Email address</label><input id="loginEmail" type="email" autocomplete="email" inputmode="email" required placeholder="you@example.com"><p class="login-note">This is a demo sign-in only. There is no account, password, server, or sync. Your email stays in this browser and is not sent anywhere.</p><div class="modal-actions"><button class="button-outline" id="loginCancel" type="button">Cancel</button><button class="button-primary" type="submit">Continue</button></div></form></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<footer id="footerBrand" class="footer-note">Concept prototype built for the Mosaic Fellowship. Not an official Be Bodywise product.</footer>
+<footer id="footerBrand" class="footer-note">An independent PCOS Companion concept for the Mosaic Fellowship. Lifestyle support only; not medical care.</footer>
 <script>
 (()=>{
   const STORE='bodywise-pcos-companion-v2';
@@ -109,6 +219,7 @@
   const today=new Date();today.setHours(0,0,0,0);
   const toISO=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
   const fromISO=s=>new Date(`${s}T12:00:00`);
+  const calendarDay=s=>{const [year,month,day]=s.split('-').map(Number);return Date.UTC(year,month-1,day)/86400000};
   const fmt=(s,opts={day:'numeric',month:'short'})=>new Intl.DateTimeFormat('en-IN',opts).format(fromISO(s));
   const shift=(date,days)=>{const d=new Date(date);d.setDate(d.getDate()+days);return toISO(d)};
   const todayKey=toISO(today);
@@ -133,7 +244,7 @@
   function save(){try{localStorage.setItem(STORE,JSON.stringify(state))}catch{showToast('This browser could not save the demo notes.')}}
   const cycleLengths=()=>state.periods.slice(1).map((date,i)=>Math.round((fromISO(date)-fromISO(state.periods[i]))/86400000));
   function updateCycle(){
-    const starts=state.periods,last=starts.at(-1),day=last?Math.floor((today-fromISO(last))/86400000)+1:null;
+    const starts=state.periods,last=starts.at(-1),day=last?calendarDay(todayKey)-calendarDay(last)+1:null;
     ['#cycleDay','#cycleDayHero','#cycleDayPage'].forEach(id=>$(id).textContent=day??'—');
     $('#lastPeriodLabel').textContent=last?`Period started ${fmt(last,{day:'numeric',month:'short'})}`:'No start logged';
     const recent=cycleLengths().slice(-3);const label=recent.length?recent.map(n=>`${n} days`).join(', '):'not enough starts yet';
@@ -170,8 +281,8 @@
   }
   function changePage(id){$$('.page').forEach(p=>p.classList.toggle('active',p.id===id));$$('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
   $$('[data-page]').forEach(b=>b.addEventListener('click',()=>changePage(b.dataset.page)));
-  function setMenuOpen(open){$('#sidebar').classList.toggle('mobile-open',open);document.body.classList.toggle('menu-open',open);$('#menuToggle').setAttribute('aria-expanded',String(open));$('#menuToggle').setAttribute('aria-label',open?'Close side menu':'Open side menu')}
-  $('#menuToggle').addEventListener('click',()=>setMenuOpen(!$('#sidebar').classList.contains('mobile-open')));$('#sidebarClose').addEventListener('click',()=>setMenuOpen(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenuOpen(false)});document.addEventListener('click',e=>{if(document.body.classList.contains('menu-open')&&!$('#sidebar').contains(e.target)&&!$('#menuToggle').contains(e.target))setMenuOpen(false)});$$('.side-nav [data-page]').forEach(b=>b.addEventListener('click',()=>setMenuOpen(false)));
+  let menuReturnFocus=null;function setMenuOpen(open){const sidebar=$('#sidebar'),wasOpen=sidebar.classList.contains('mobile-open');if(open&&!wasOpen)menuReturnFocus=$('#menuToggle');sidebar.classList.toggle('mobile-open',open);document.body.classList.toggle('menu-open',open);$('#menuToggle').setAttribute('aria-expanded',String(open));$('#menuToggle').setAttribute('aria-label',open?'Close side menu':'Open side menu');if(open){sidebar.setAttribute('role','dialog');sidebar.setAttribute('aria-modal','true');sidebar.setAttribute('aria-label','PCOS Companion menu');$('#sidebarClose').focus()}else{sidebar.removeAttribute('role');sidebar.removeAttribute('aria-modal');sidebar.setAttribute('aria-label','Your space');if(wasOpen){menuReturnFocus?.focus();menuReturnFocus=null}}}
+  $('#menuToggle').addEventListener('click',()=>setMenuOpen(!$('#sidebar').classList.contains('mobile-open')));$('#sidebarClose').addEventListener('click',()=>setMenuOpen(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenuOpen(false);if(e.key==='Tab'&&document.body.classList.contains('menu-open')){const controls=[...$('#sidebar').querySelectorAll('button:not([disabled]),a[href],summary')].filter(el=>!el.hidden&&el.getClientRects().length);if(!controls.length)return;const first=controls[0],last=controls.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});document.addEventListener('click',e=>{if(document.body.classList.contains('menu-open')&&!$('#sidebar').contains(e.target)&&!$('#menuToggle').contains(e.target))setMenuOpen(false)});$$('.side-nav [data-page]').forEach(b=>b.addEventListener('click',()=>setMenuOpen(false)));
   const modal=$('#periodModal'),periodInput=$('#periodDate'),previousFocus={value:null};
   function openModal(){previousFocus.value=document.activeElement;periodInput.value=todayKey;modal.classList.add('open');setTimeout(()=>periodInput.focus(),50)}
   function closeModal(){modal.classList.remove('open');previousFocus.value?.focus()}
@@ -181,7 +292,7 @@
   $('#saveOvulation').addEventListener('click',()=>{const type=$('#ovulationNote').value,date=$('#ovulationDate').value;if(!type||!date){showToast('Choose a note type and date.');return}if(date>todayKey){showToast('Choose today or an earlier date.');return}state.ovulationNotes.push({type,date});save();$('#ovulationSaved').textContent=`Saved ${type.toLowerCase()} · ${fmt(date)}`;showToast('Note saved on this device.')});
   $('#clearSymptoms').addEventListener('click',()=>{activateUserData();getDay().symptoms={};save();renderSymptoms();updateInsights();showToast('Today’s symptom notes cleared.')});
   $('#doctorNotes').value=state.doctorNotes;$('#doctorNotes').addEventListener('input',e=>{state.doctorNotes=e.target.value;save()});$('#printReport').addEventListener('click',()=>window.print());
-  function summaryText(){const cutoff=shift(today,-89),dates=state.periods.filter(d=>d>=cutoff),lengths=state.periods.slice(1).map((d,i)=>({date:d,length:Math.round((fromISO(d)-fromISO(state.periods[i]))/86400000)})).filter(x=>x.date>=cutoff).map(x=>x.length);return `Bodywise PCOS companion — self-reported summary\nCycle starts in last 90 days: ${dates.map(d=>fmt(d,{day:'numeric',month:'short',year:'numeric'})).join(', ')||'none logged'}\nCycle lengths in last 90 days: ${lengths.slice(-3).join(', ')||'not enough starts yet'} days\nDays with entries in last 90 days: ${loggedDays().filter(([d])=>d>=cutoff).length}\nAppointment notes: ${state.doctorNotes||'No additional notes added.'}\n\nThis is a self-reported summary, not a diagnosis or treatment plan.`}
+  function summaryText(){const cutoff=shift(today,-89),dates=state.periods.filter(d=>d>=cutoff),lengths=state.periods.slice(1).map((d,i)=>({date:d,length:Math.round((fromISO(d)-fromISO(state.periods[i]))/86400000)})).filter(x=>x.date>=cutoff).map(x=>x.length);return `PCOS Companion — self-reported summary\nCycle starts in last 90 days: ${dates.map(d=>fmt(d,{day:'numeric',month:'short',year:'numeric'})).join(', ')||'none logged'}\nCycle lengths in last 90 days: ${lengths.slice(-3).join(', ')||'not enough starts yet'} days\nDays with entries in last 90 days: ${loggedDays().filter(([d])=>d>=cutoff).length}\nAppointment notes: ${state.doctorNotes||'No additional notes added.'}\n\nThis is a self-reported summary, not a diagnosis or treatment plan.`}
   $('#copyReport').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summaryText());showToast('Summary copied.')}catch{showToast('Copy is unavailable here; use Print / save as PDF.')}});
   $('#todayDate').textContent=new Intl.DateTimeFormat('en-IN',{weekday:'short',day:'numeric',month:'short'}).format(today);
   // Personal setup, optional trackers, supplements and calm milestone feedback.
@@ -213,14 +324,14 @@
   const tr=text=>langDict[state.language]?.[text]||text;
   function setLanguage(lang){state.language=lang;document.documentElement.lang=lang==='hi'?'hi':'en';$('#langEn').classList.toggle('active',lang==='en');$('#langHi').classList.toggle('active',lang==='hi');const dict=langDict[lang]||{};document.querySelectorAll('[data-page]').forEach(b=>{const text=b.childNodes[b.childNodes.length-1];if(text&&text.nodeType===3){const en=b.dataset.enText||(b.dataset.enText=text.textContent.trim());text.textContent=' '+(dict[en]||en)}});$$('[data-i18n],.learn-card h2,.learn-card p,.learn-card .learn-foot').forEach(el=>{const en=el.dataset.enText||(el.dataset.enText=el.textContent.trim());el.textContent=dict[en]||en});renderSymptoms();renderHabits();save()}
   $('#langEn').addEventListener('click',()=>setLanguage('en'));$('#langHi').addEventListener('click',()=>setLanguage('hi'));
-  const loginModal=$('#loginModal');$('#loginOpen').addEventListener('click',()=>{setMenuOpen(false);$('#loginEmail').value=state.profile.email||'';loginModal.classList.add('open');$('#loginEmail').focus()});function closeLogin(){loginModal.classList.remove('open')}$('#loginClose').addEventListener('click',closeLogin);$('#loginCancel').addEventListener('click',closeLogin);loginModal.addEventListener('click',e=>{if(e.target===loginModal)closeLogin()});$('#loginForm').addEventListener('submit',e=>{e.preventDefault();const email=$('#loginEmail').value.trim();if(!$('#loginEmail').checkValidity())return;state.profile.email=email;save();applyProfile();closeLogin();showToast('Demo space opened on this device.')});
+  const loginModal=$('#loginModal'),loginButton=$('#loginOpen');let loginReturnFocus=null;loginButton.addEventListener('click',()=>{loginReturnFocus=window.matchMedia('(max-width:900px)').matches?$('#menuToggle'):loginButton;setMenuOpen(false);$('#loginEmail').value=state.profile.email||'';loginModal.classList.add('open');$('#loginEmail').focus()});function closeLogin(){loginModal.classList.remove('open');loginReturnFocus?.focus();loginReturnFocus=null}$('#loginClose').addEventListener('click',closeLogin);$('#loginCancel').addEventListener('click',closeLogin);loginModal.addEventListener('click',e=>{if(e.target===loginModal)closeLogin()});loginModal.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closeLogin();return}if(e.key==='Tab'){const controls=[...loginModal.querySelectorAll('button:not([disabled]),input:not([disabled])')].filter(el=>!el.hidden);if(!controls.length)return;const first=controls[0],last=controls.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});$('#loginForm').addEventListener('submit',e=>{e.preventDefault();const email=$('#loginEmail').value.trim();if(!$('#loginEmail').checkValidity())return;state.profile.email=email;save();applyProfile();closeLogin();showToast('Demo space opened on this device.')});
   function updateCorrelation(){const root=$('#correlationInsights'),days=loggedDays(),statements=[];if(days.length<7){root.innerHTML='<div class="empty-state">Your story takes time. Log at least 7 days to see a gentle reflection from your own notes.</div>';return}const movement=days.filter(([,d])=>d.habits?.movement),notMovement=days.filter(([,d])=>!d.habits?.movement);if(movement.length>=3&&notMovement.length>=3){const mean=(arr,key)=>arr.map(([,d])=>({okay:2,some:1,more:0,unset:null}[d.symptoms?.[key]])).filter(x=>x!==null).reduce((a,b)=>a+b,0)/Math.max(1,arr.filter(([,d])=>d.symptoms?.energy).length);const hi=mean(movement,'energy'),lo=mean(notMovement,'energy');if(Number.isFinite(hi)&&Number.isFinite(lo))statements.push(hi>lo?'Energy notes tended to be higher on days you also logged movement.':'Your energy notes looked similar across days with and without a movement check-in.')}
     const start=state.products.at(-1);if(start){const at=fromISO(start.date),afterEnd=new Date(at.getTime()+28*86400000),before=days.filter(([d])=>fromISO(d)<at&&fromISO(d)>=new Date(at.getTime()-28*86400000)),after=days.filter(([d])=>fromISO(d)>=at&&fromISO(d)<afterEnd);if(before.length>=3&&after.length>=3){const noted=arr=>arr.filter(([,d])=>['skin','facialHair','hairFall'].some(k=>['some','more'].includes(d.symptoms?.[k]))).length;statements.push(`${start.name}: skin or hair symptoms were noted on ${noted(before)} of ${before.length} logged days in the 4 weeks before, and ${noted(after)} of ${after.length} logged days in the 4 weeks after the start date.`)}}
     root.innerHTML=statements.length?statements.map(s=>`<article class="surface correlation-card"><div class="eyebrow">FROM YOUR NOTES</div><p>${esc(s)}</p></article>`).join(''):'<div class="empty-state">Keep logging habits and symptoms to build a useful comparison. We need a few entries in each group first.</div>'}
   const originalUpdateInsights=updateInsights;updateInsights=function(){originalUpdateInsights();updateCorrelation()};
   const navIcon=(name)=>{const paths={today:'<circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/>',cycle:'<circle cx="12" cy="12" r="8"/><path d="M12 4v3m0 10v3M4 12h3m10 0h3"/>',insights:'<path d="M4 18h16M6 15l4-5 3 3 5-7"/>',report:'<path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7m-7 4h7"/>',learn:'<path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4"/>',more:'<circle cx="12" cy="12" r="9"/><path d="M7 12h.01M12 12h.01M17 12h.01"/>'};return `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]}</svg>`};
   document.querySelectorAll('.side-icon').forEach((el,i)=>el.innerHTML=navIcon(['today','cycle','insights','report','learn'][i]));document.querySelectorAll('.mobile-nav button span').forEach((el,i)=>el.innerHTML=navIcon(['today','cycle','insights','report','learn','more'][i]));document.querySelectorAll('.insight-icon,.mini-mark').forEach((el,i)=>el.innerHTML=navIcon(['cycle','today','insights','report'][i%5]));
-  $('#footerBrand').textContent='Concept prototype built for the Mosaic Fellowship. Not an official Be Bodywise product.';
+  $('#footerBrand').textContent='An independent PCOS Companion concept for the Mosaic Fellowship. Lifestyle support only; not medical care.';
   personalize();if(state.language==='hi')setLanguage('hi');
   renderSymptoms();renderHabits();updateCycle();updateInsights();
 })();
